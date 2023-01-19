@@ -60,7 +60,7 @@ class UsersList extends Component {
 
   removeUser = (e, id) => {
     const { users } = this.state;
-    const newUsers = [...users].filter((i) => i.id !== id);
+    const newUsers = users.filter((i) => i.id !== id);
     const removeIndex = usersData.filter((u) => u.id !== id);
     console.log("removeIndex", removeIndex);
     this.setState({ users: newUsers });
